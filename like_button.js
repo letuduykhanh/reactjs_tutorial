@@ -37,11 +37,33 @@ var user = {
 //     </div>
 // )
 
-var title = response.potentiallyMaliciousInput;
-var element = React.createElement(
-    "h1",
-    null,
-    title
-);
+// const title = response.potentiallyMaliciousInput;
+// const element = <h1>{title}</h1>;
+
+// const element = <h1>Hello, world</h1>;
+
+// function tick() {
+//     const element = (
+//         <div>
+//             <h1>Hello, world!</h1>
+//             <h2>It is {new Date().toLocaleTimeString()}.</h2>
+//         </div>
+//     )
+//     ReactDOM.render(element, document.getElementById('root'));
+// }
+
+// setInterval(tick, 1000);
+
+function Welcome(props) {
+    return React.createElement(
+        "h1",
+        null,
+        "Hello, ",
+        props.name
+    );
+}
+
+// const element = <div/>;
+var element = React.createElement(Welcome, { name: "Sara" });
 
 ReactDOM.render(element, document.getElementById("root"));
